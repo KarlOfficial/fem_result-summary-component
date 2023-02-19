@@ -1,0 +1,266 @@
+/* FW 500,700,800 */
+@font-face {
+    font-family: "hg-main";
+    src: url(/assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    /* outline: 1px solid red; */
+}
+
+:root {
+    /* MAIN COLORS */
+    --mc-light_red: hsl(0, 100%, 67%);
+    --mc-orangey-yellow: hsl(39, 100%, 56%);
+    ---mc-green-teal: hsl(166, 100%, 37%);
+    --mc-cobalt-blue: hsl(234, 85%, 45%);
+
+    /* GRADIENT */
+    --gdt-light_slate-blue: hsl(252, 100%, 67%);
+    --gdt-light_royal-blue: hsl(241, 81%, 54%);
+    --gdt-violet-blue: hsla(256, 72%, 46%, 1);
+    --gdt-persian-blue: hsla(241, 72%, 46%, 0);
+
+    /* NEUTRAL */
+    --ntl-white: #fff;
+    --ntl-pale_blue: hsl(221, 100%, 96%);
+    --ntl-light_lavender: hsl(241, 100%, 89%);
+    --ntl-dark_grey-blue: hsl(224, 30%, 27%);
+
+    --ff-main: "hg-main";
+}
+
+.container {
+    height: 100vh;
+    font-family: var(--ff-main);
+}
+
+/* UPPER PANEL */
+
+.upper__panel {
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    font-family: var(--ff-main);
+    text-align: center;
+    color: var(--white);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+    padding: 1rem 3rem 2.5rem 3rem;;
+    border-radius: 0 0 30px 30px;
+}
+
+.center__circle {
+    background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    border-radius: 50px;
+    
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.upper__sub-text {
+    color: var(--ntl-light_lavender);
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.score {
+    font-size: 2.5rem;
+    color: var(--ntl-white);
+}
+
+.score__overall {
+    color: var(--ntl-light_lavender);
+    font-weight: 500;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+.sub-sect {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.upper__sub-heading {
+    color: var(--ntl-white);
+    font-size: 1.2rem;
+}
+
+.upper__desc {
+    color: var(--ntl-light_lavender);
+    font-weight: 500;
+}
+
+/* MAIN PANEL */
+
+.main__panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    padding: 1.5rem;
+}
+
+.main__title {
+    font-weight: 700;
+}
+
+.stats__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.stats {
+    display: flex;
+    gap: 1rem;
+
+    padding: 1rem;
+
+    border-radius: 10px;
+}
+
+.stats__name {
+    font-weight: 500;
+}
+
+.red {
+    color: var(--mc-light_red);
+}
+
+.yellow {
+    color: var(--mc-orangey-yellow);
+}
+
+.green {
+    color: var(---mc-green-teal);
+}
+
+.blue {
+    color: var(--mc-cobalt-blue);
+}
+
+.stats:nth-child(1) {
+    background-color: hsla(0, 100%, 67%, 0.05);
+}
+
+.stats:nth-child(2) {
+    background-color: hsla(39, 100%, 56%, 0.05);
+}
+
+.stats:nth-child(3) {
+    background-color: hsla(166, 100%, 37%, 0.05);
+}
+
+.stats:nth-child(4) {
+    background-color: hsla(234, 85%, 45%, 0.05);
+}
+
+.stats__points {
+    font-weight: 700;
+    margin-left: auto;
+}
+
+span {
+    color: var(--ntl-dark_grey-blue);
+    opacity: 0.5;
+}
+
+.btn {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+
+    padding: 1rem 0;
+    border-radius: 50px;
+
+    color: var(--ntl-white);
+    background-color: var(--ntl-dark_grey-blue);
+}
+
+.btn:hover, 
+.btn:focus {
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%))
+}
+
+@media (min-width: 600px) {
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        max-height: 450px;
+        max-width: 650px;
+
+        display: flex;
+
+        border-radius: 30px;
+        overflow: auto;
+        box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .upper__panel {
+        border-radius: 30px;
+        flex: 1 1 300px;
+
+        display: flex;
+        justify-content: flex-start;
+
+        padding: 1.5rem;
+    }
+
+    .upper__sub-text {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .center__circle {
+        width: 170px;
+        height: 170px;
+        border-radius: 100px;
+        margin-bottom: 1.5rem;
+    }
+
+    .score {
+        font-size: 4rem;
+    }
+
+    .score__overall {
+        font-size: 1rem;
+    }
+
+    .upper__sub-heading {
+        font-size: 2rem;
+    }
+
+    .upper__desc {
+        font-size: 1rem;
+        padding: 0 1.5rem;
+    }
+
+    .main__panel {
+        flex: 1 1 300px;
+        justify-content: space-evenly;
+    }
+
+    .main__title {
+        font-size: 1.5rem;
+    }
+}
